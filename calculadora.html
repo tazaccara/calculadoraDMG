@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora de rsico</title>
+   	<link rel="stylesheet" href="style.css">
+   	<script src="calculadora.js"></script>
+</head>
+<body>
+    <section>
+        <h1>Calculadora de risco para DMG</h1>
+        <form id="calculadora" name="form" action="calculadora.html" method="get">
+	        
+            <fieldset>
+            <label>DMG anterior?</label>
+            <br>
+	        <input type="radio" name="DMGanterior" value="sim" id="sim" required> <label for="sim">Sim</label>   
+            <input type="radio" name="DMGanterior" value="primigesta" id="primigesta"><label for="primigesta"> Primigesta</label>
+            <input type="radio" name="DMGanterior" value="nao" id="nao"> Não
+	        <span id="DMGanterior_error"></span><br>
+            </fieldset>
+            
+            <fieldset>
+            <label>IMC</label>
+            <br>
+	        <input type="radio" name="imc" value="menor25" id="menor25" required><label for="menor25"> Menor que 25</label>
+            <input type="radio" name="imc" value="25a29" id="25a29"> <label for="25a29">25 a 29.9</label>
+            <input type="radio" name="imc" value="30ouMais" id="30ouMais"> <label for ="30ouMais">Maior ou igual a 30</label>
+	        <span id="imc_error"></span><br>
+            </fieldset>
+	        
+            <fieldset>
+	        <label>Idade</label>
+            <br>
+	        <input type="text" id="idade" name="idade" required>
+	        <span id="idade_error"></span><br>
+	        </fieldset>
+        
+            <fieldset>
+	        <label for="fbg">Glicemia de jejum (em mg/dL):</label>
+            <br>    
+	        <input type="text" id="fbg" name="fbg" required>
+            <span id="fbg_error"></span><br>
+            </fieldset>
+	        
+            <p id="score_total"></p>
+	  
+	        <label>&nbsp;</label>
+	        <input type="button" id="calcular" value="Calcular o risco"><br>
+            <input type="button" id="clear" value="Limpar valores"><br>
+	    </form>
+    </section>
+</body>
+</html>
+

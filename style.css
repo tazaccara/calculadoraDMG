@@ -1,0 +1,29 @@
+article, aside, figure, footer, header, nav, section {
+    display: block;
+}
+body {
+   
+    background-color: #eee;
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid gray;
+}
+section {
+    padding: 0 2em 1em;
+}
+fieldset{
+    margin:0.5em;
+    border: none;
+}
+label {
+    text-align: right;
+    width:50px;
+}
+input {
+    margin: 1em 0.5em 1em 0;
+    padding: 0.5em;
+}
+
+span {
+	color: navy;
+}
