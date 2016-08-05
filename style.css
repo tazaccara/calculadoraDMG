@@ -1,28 +1,76 @@
-article, aside, figure, footer, header, nav, section {
-    display: block;
-}
+
 body {
-   
-    background-color: #eee;
+    font-family: 'Lato', sans-serif;
+    background-color: #fff;
     margin: 0 auto;
     width: 80%;
     border: 1px solid gray;
+}
+header{
+    background-color: #061E6B;
+}
+.clearfix{
+    overflow: auto;
+}
+header img{
+    max-height: 120px;
+}
+.left{
+    float:left;
+    margin: 1em;
+}
+.right{
+    float:right;
+    margin: 1em;
+}
+h1{
+    font-size: 2em;
+    color: #061E6B;
+    text-align: center;
+    margin-bottom: 0;
+    clear: both;
+}
+.small{
+    font-size: 0.8em;
+    margin-bottom: 2em;
+
 }
 section {
     padding: 0 2em 1em;
 }
 fieldset{
-    border: 1px solid black;
+    margin-top: 0.5em;
+    border: none;
+    border-bottom: 1px solid #888;
 }
-label {
-    text-align: right;
-    width:50px;
+fieldset:last-of-type{
+    border-bottom: none;
 }
 input {
     margin: 1em 0.5em 0.5em 2em;
     padding: 0.5em;
 }
-
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=button]{
+    font-size: 1.5em;
+    padding:0.5em;
+}
 span {
-	color: navy;
+	color: red;
+}
+.error{
+    margin-left: 2em;
+}
+#score_total{
+    font-size:1.5em;
+}
+
+@media all and (max-width: 600px){
+    body{
+        width: 100%;
+    }
 }

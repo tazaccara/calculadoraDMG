@@ -116,12 +116,12 @@ function validate(){
     
     clearErrorMsgs();
     
-    return checkNonEmpty("idade", "Preencha a idade da paciente") &&
-    checkNonEmpty("fbg", "Informe a glicemia de jejum da paciente") &&
-    checkRange("idade", 15, 55, "A idade deve estar entre 15 e 55 anos") &&
-    checkRange("fbg", 92, 125, "A glicemia de jejum deve estar entre 92 e 125mg/dL") &&
-    checkRadio("DMGanterior", "Escolha uma das opções")&&
-    checkRadio("imc", "Escolha uma das opções");
+    return checkRadio("DMGanterior", "Escolha uma das opções")&&
+        checkRadio("imc", "Escolha uma das opções") &&
+        checkNonEmpty("idade", "Preencha a idade da paciente") &&
+        checkNonEmpty("fbg", "Informe a glicemia de jejum da paciente") &&
+        checkRange("idade", 15, 55, "A idade deve estar entre 15 e 55 anos") &&
+        checkRange("fbg", 92, 125, "A glicemia de jejum deve estar entre 92 e 125mg/dL");
 }
 
 var calc = function () {
@@ -135,7 +135,7 @@ var calc = function () {
         var score_total = score_DMG + score_FBG + score_idade + score_IMC;
         var probabilidade = getProbability(score_total);
         
-        $("#score_total").html('O score final é ' + score_total + ' e a probabilidade da paciente apresentar DMG é de ' + probabilidade[0] + ' - ' + probabilidade[1] + '%');
+        $("#score_total").html('O score final é ' + score_total + ' e a probabilidade da paciente apresentar DMG após o TTOG é de ' + probabilidade[0] + ' - ' + probabilidade[1] + '%');
     }
 }
 

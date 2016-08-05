@@ -4,51 +4,54 @@
 	<meta charset="UTF-8">
 	<title>Calculadora de rsico</title>
    	<link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
    	<script src="calculadora.js"></script>
 </head>
 <body>
+    <header class="clearfix">
+        <img class="left" src="images/endocrino-logo2.png">
+        <img class="right" src="images/clinica-logo2.png">
+    </header>
     <section>
         <h1>Calculadora de risco para DMG</h1>
+        <p class="small">Colocar aqui informações sobre o uso da calculadora/baseado em dados do projeto "Tal", por "Ana Cláudia e Rafaela Alkmin"</p>
         <form id="calculadora" name="form" action="calculadora.html" method="get">
 	        
             <fieldset>
-            <label>DMG anterior?</label>
-            <br>
+            <label for="DMGanterior">DMG anterior?</label>  <span id="DMGanterior_error" class="error"></span><br>
 	        <input type="radio" name="DMGanterior" value="67" id="sim" required> <label for="sim">Sim</label><br>  
             <input type="radio" name="DMGanterior" value="4" id="primigesta"><label for="primigesta"> Primigesta</label><br>
             <input type="radio" name="DMGanterior" value="0" id="nao"> Não
-	        <span id="DMGanterior_error" class="error"></span><br>
+	       
             </fieldset>
             
             <fieldset>
-            <label>IMC</label>
-            <br>
+            <label for="imc">IMC</label> <span id="imc_error" class="error"></span><br>
 	        <input type="radio" name="imc" value="0" id="menor25" required><label for="menor25"> Menor que 25</label><br>
             <input type="radio" name="imc" value="19" id="25a29"> <label for="25a29">25 a 29.9</label><br>
             <input type="radio" name="imc" value="32" id="30ouMais"> <label for ="30ouMais">Maior ou igual a 30</label><br>
-	        <span id="imc_error" class="error"></span><br>
+	        
             </fieldset>
 	        
             <fieldset>
-	        <label>Idade</label>
-            <br>
-	        <input type="text" id="idade" name="idade" required>
-	        <span id="idade_error" class="error"></span><br>
+	        <label for="idade">Idade</label> <span id="idade_error" class="error"></span><br>
+	        <input type="number" id="idade" name="idade" required>
+	        
 	        </fieldset>
         
             <fieldset>
-	        <label for="fbg">Glicemia de jejum (em mg/dL):</label>
-            <br>    
-	        <input type="text" id="fbg" name="fbg" required>
-            <span id="fbg_error" class="error"></span><br>
+	        <label for="fbg">Glicemia de jejum (em mg/dL):</label> <span id="fbg_error" class="error"></span><br>  
+	        <input type="number" id="fbg" name="fbg" required>
             </fieldset>
-	        
-            <p id="score_total"></p>
-	  
+            
+            
+             <p id="score_total"></p>
+	        	  
 	        <label>&nbsp;</label>
 	        <input type="button" id="calcular" value="Calcular o risco">
             <input type="button" id="clear" value="Limpar valores"><br>
+            
 	    </form>
     </section>
 </body>
