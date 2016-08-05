@@ -12,15 +12,14 @@ section {
     padding: 0 2em 1em;
 }
 fieldset{
-    margin:0.5em;
-    border: none;
+    border: 1px solid black;
 }
 label {
     text-align: right;
     width:50px;
 }
 input {
-    margin: 1em 0.5em 1em 0;
+    margin: 1em 0.5em 0.5em 2em;
     padding: 0.5em;
 }
 
